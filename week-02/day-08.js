@@ -29,3 +29,14 @@ function colorOf(r, g, b) {
 
 
 //https://www.codewars.com/kata/57256064856584bc47000611/train/javascript
+
+function howManySmaller(arr, n) {
+  let count = 0;
+  for (let elem of arr) {
+    elem = parseFloat(elem.toFixed(2));
+    if (elem < n) {
+      count++;
+    }
+  }
+  return count;
+}
