@@ -25,7 +25,7 @@ function pickIt(arr) {
 //https://www.codewars.com/kata/5721c189cdd71194c1000b9b/train/javascript
 
 function grabDoll(dolls) {
-  let bag = [],
+  const bag = [],
     doll;
   for (const doll of dolls) {
     if (doll === "Hello Kitty" || doll === "Barbie doll") bag.push(doll);
@@ -39,8 +39,8 @@ function grabDoll(dolls) {
 //https://www.codewars.com/kata/5722b3f0bd5583cf44001000/train/javascript
 
 function giveMeFive(obj) {
-  let five = [];
-  for (var key in obj) {
+  const five = [];
+  for (const key in obj) {
     if (key.length === 5) five.push(key);
     if (obj[key].length === 5) five.push(obj[key]);
   }
