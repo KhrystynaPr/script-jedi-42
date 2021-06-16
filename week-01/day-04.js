@@ -27,7 +27,7 @@ function pickIt(arr) {
 function grabDoll(dolls) {
   let bag = [],
     doll;
-  for (doll of dolls) {
+  for (const doll of dolls) {
     if (doll === "Hello Kitty" || doll === "Barbie doll") bag.push(doll);
     else continue;
     if (bag.length > 2) break;
