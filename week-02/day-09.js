@@ -1,12 +1,9 @@
 //https://www.codewars.com/kata/57274562c8dcebe77e001012
 
 function cutIt(arr) {
-  let minLength = arr[0].length;
-  arr.forEach(function (str) {
-    if (str.length < minLength) {
-      minLength = str.length;
-    }
-  });
+  const minLength = arr.reduce((accumulator, current) => {
+    return current.length < accumulator.length ? current : accumulator;
+  }).length;
   return arr.map((elem) => elem.slice(0, minLength));
 }
 
