@@ -1,7 +1,12 @@
 //https://www.codewars.com/kata/571edd157e8954bab500032d/train/javascript
 
-const v1 = 50;
-(v2 = 100), (v3 = 150), (v4 = 200), (v5 = 2), (v6 = 250);
+const v1 = 50,
+  v2 = 100,
+  v3 = 150,
+  v4 = 200,
+  v5 = 2,
+  v6 = 250;
+
 
 function equal1() {
   const a = v1;
