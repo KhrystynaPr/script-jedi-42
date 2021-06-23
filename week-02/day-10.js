@@ -25,24 +25,11 @@ function fiveLine(s) {
 //https://www.codewars.com/kata/57284d23e81185ae6200162a/train/javascript
 
 function topSecret(str) {
-  const decryptedText = str
+  return str
     .split("")
     .map((char) => decrypt(char))
     .join("");
-  // getFirstAnswer(decryptedText)
-  // getSecondAnswer(decryptedText)
-  // getThirdAnswer(decryptedText)
-  return decryptedText;
 }
-
-// function getFirstAnswer(decryptedText) {
-// }
-
-// function getSecondAnswer(decryptedText) {
-// }
-
-// function getThirdAnswer(decryptedText) {
-// }
 
 function decrypt(char) {
   const charCode = char.charCodeAt();
@@ -66,3 +53,9 @@ function isLowerCaseLetter(charCode) {
 function isUpperCaseLetter(charCode) {
   return charCode >= 65 && charCode <= 90;
 }
+//question1: The top secret file number is...
+answer1 = "2207";
+//question2: Super agent's name is...
+answer2 = "jBFJo";
+//question3: He stole the treasure is...
+answer3 = "bird's nest";
