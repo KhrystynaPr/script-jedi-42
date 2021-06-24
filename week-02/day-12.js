@@ -8,16 +8,22 @@ function wordToBin(str){
 //https://www.codewars.com/kata/57f75cc397d62fc93d000059
 
 function calc(x) {
-  let total1 = x
+  const total1 = x
     .split("")
     .map((elem) => elem.charCodeAt())
     .join("");
-  let total2 = total1.replaceAll("7", "1");
-  let sum1 = total1
+  const total2 = total1.replaceAll("7", "1");
+  const sum1 = total1
     .split("")
     .reduce((acumulator, current) => +acumulator + +current);
-  let sum2 = total2
+  const sum2 = total2
     .split("")
     .reduce((acumulator, current) => +acumulator + +current);
   return sum1 - sum2;
+}
+
+if (!String.prototype.replaceAll) {
+  String.prototype.replaceAll = function (str, newStr) {
+    return this.replace(new RegExp(str, "g"), newStr);
+  };
 }
