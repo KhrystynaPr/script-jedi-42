@@ -13,13 +13,11 @@ function calc(x) {
     .map((elem) => elem.charCodeAt())
     .join("");
   const total2 = total1.replaceAll("7", "1");
-  const sum1 = total1
-    .split("")
-    .reduce((acumulator, current) => +acumulator + +current);
-  const sum2 = total2
-    .split("")
-    .reduce((acumulator, current) => +acumulator + +current);
-  return sum1 - sum2;
+  return getSum(total1) - getSum(total2);
+}
+
+function getSum(elem) {
+  return elem.split("").reduce((acumulator, current) => +acumulator + +current);
 }
 
 if (!String.prototype.replaceAll) {
