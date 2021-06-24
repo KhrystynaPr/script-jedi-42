@@ -33,8 +33,8 @@ function colorOf(r, g, b) {
 function howManySmaller(arr, n) {
   let count = 0;
   for (let elem of arr) {
-    elem = parseFloat(elem.toFixed(2));
-    if (elem < n) {
+     const roundedEl = parseFloat(elem.toFixed(2));
+    if (roundedEl < n) {
       count++;
     }
   }
