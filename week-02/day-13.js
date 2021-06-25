@@ -9,3 +9,19 @@ function match(candidate, job) {
 
 
 //https://www.codewars.com/kata/56c2578be8b139bd5c001bd8/train/javascript
+
+function match(job, candidates) {
+  return candidates.filter((candidate) => {
+    if (candidate.desiresEquity && job.equityMax <= 0) {
+      return false;
+    }
+    for (const city of [
+      candidate.currentLocation,
+      ...candidate.desiredLocations,
+    ]) {
+      if (job["locations"].includes(city)) {
+        return true;
+      }
+    }
+  });
+}
