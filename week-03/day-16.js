@@ -31,17 +31,16 @@ function sortIt(arr) {
 }
 
  
-//https://www.codewars.com/kata/572fdeb4380bb703fc00002c перевірити чи не міняється вхідний масив
+//https://www.codewars.com/kata/572fdeb4380bb703fc00002c 
 
-function isolateIt(arr){
- return arr.map(item => { 
-    if (item.length%2===0) {
-      let subArray = item.split("") 
-        subArray.splice(item.length / 2, 0, "|")
-        return subArray.join("")  
+function isolateIt(arr) {
+  return arr.map((item) => {
+    const subArray = item.split("");
+    if (item.length % 2 === 0) { 
+      subArray.splice(item.length / 2, 0, "|");
+      return subArray.join("");
     }
-    let subArray = item.split("") 
-        subArray.splice(item.length / 2, 1, "|")
-        return subArray.join("")  
-  })
+    subArray.splice(item.length / 2, 1, "|");
+    return subArray.join("");
+  });
 }
