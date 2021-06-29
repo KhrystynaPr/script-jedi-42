@@ -43,9 +43,9 @@ function infiniteLoop(arr, d, n) {
 function separateToArrays(arrayOfLengths, modifiedArray) {
   const result = [];
   for (const length of arrayOfLengths) {
-    const firstArray = modifiedArray.slice(0, length);
+    const cutedArray = modifiedArray.slice(0, length);
     modifiedArray = modifiedArray.slice(length);
-    result.push(firstArray);
+    result.push(cutedArray);
   }
   return result;
 }
