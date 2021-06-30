@@ -14,3 +14,32 @@ function countGrade(scores) {
 function filter(arr, upperVal, lowerVal) {
   return arr.filter(item => item < upperVal && item >= lowerVal).length;
 }
+
+
+//https://www.codewars.com/kata/57308546bd9f0987c2000d07
+
+function mirrorImage(arr) {
+  let a = -1;
+  let b = -1;
+  arr.some((elem, index) => {
+    if (index === arr.length - 1) {
+      return false;
+    }
+    if (reverseEqual(elem, arr[index + 1])) {
+      a = elem;
+      b = arr[index + 1];
+      return true;
+    }
+  });
+  return [a, b];
+}
+
+function reverseEqual(a, b) {
+  return a.toString() === b.toString().split("").reverse().join("");
+}
+
+
+//https://www.codewars.com/kata/5731861d05d14d6f50000626
+
+
+
