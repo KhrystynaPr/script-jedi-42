@@ -19,7 +19,6 @@ function greet_abe() {
   return `Hello, ${name}!`;
 };
 
-
 function greet_ben() {
   name = 'Ben'; 
   return `Hello, ${name}!`;
