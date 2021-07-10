@@ -13,13 +13,11 @@ function buildFun(n) {
 
 // https://www.codewars.com/kata/514aa0dc21607ae236000017
 
-let name;
-function greet_abe() {
-  name = 'Abe';
-  return `Hello, ${name}!`;
-};
+let name = 'Abe';
+const greet_abe = greet(name);
+name = 'Ben';
+const greet_ben = greet(name);
 
-function greet_ben() {
-  name = 'Ben'; 
-  return `Hello, ${name}!`;
-};
+function greet(ourName) {
+  return () => `Hello, ${ourName}!`;
+}
