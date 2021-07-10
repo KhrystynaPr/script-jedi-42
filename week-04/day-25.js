@@ -14,6 +14,6 @@ const alpha = {
     getNameFunc : function() {
         return function() {
             return this.name;
-        }.bind(alpha);
+        }.bind(this);
     }
 };
