@@ -18,6 +18,7 @@ class Cylon {
 class HumanSkin extends Cylon {
   constructor(model) {
     super(model);
-    this.infiltrate = () => `Infiltrate the colonies`;
+    this.infiltrate =  () => `Infiltrate the colonies`;
   }
 }
+
