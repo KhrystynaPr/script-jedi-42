@@ -17,9 +17,9 @@ Array.prototype.reduce = function (process, initial) {
 const frozen = Symbol("frozen");
 
 Object.deepFreeze = function (object) {
-  if (object.frozen) return;
-  Object.freeze(object);
+  if (object.frozen) return; 
   object.frozen = true;
+  Object.freeze(object);
   for (const key in object) {
     Object.deepFreeze(object[key]);
   }
